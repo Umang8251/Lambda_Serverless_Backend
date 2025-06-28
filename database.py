@@ -101,7 +101,8 @@ def get_runtime_backend(func_id: int) -> str:
     else:
         return 'docker'  # Default backend
 
-
+if __name__ == "__main__":
+    init_db()
 # database.py
 
 def save_execution_metrics(func_id: int, success: bool, duration: float, backend: str, error_msg: str = None):
